@@ -44,13 +44,18 @@ pip install pybytesize
 
 Create a `ByteSize` object from integers or human-readable strings.
 
-```python
-from bytesize import ByteSize
+By default, string representation will find the most suitable (binary) unit.
 
-size1 = ByteSize(1048576)  # From bytes
-size2 = ByteSize("1MB")    # From a string
-print(size1)  # Outputs: '1.00 MiB'
-# Output: 1.00 MiB
+```python
+>>> from bytesize import ByteSize
+
+>>> size = ByteSize(1_048_576)       # From an integer bytes 
+>>> print(size)
+1.00 MiB
+
+>>> size = ByteSize("1_073_741_824MB")    # From a string
+>>> print(size)
+1.00 PiB
 ```
 
 ### Unit Conversion
@@ -58,30 +63,38 @@ print(size1)  # Outputs: '1.00 MiB'
 Access size in different units dynamically.
 
 ```python
-print(size1.MB)       # Metric: 1.048576 MB
-# Output: 1.048576
-print(size1.MiB)      # Binary: 1.00 MiB
-# Output: 1.00
-print(size1.readable_metric)  # ('MB', 1.05)
-# Output: ('MB', 1.05)
-print(size1.readable_binary)  # ('MiB', 1.00)
-# Output: ('MiB', 1.00)
+>>> size1 = ByteSize(1_073_741_824)
+>>> print(size1.MB)       # Metric:
+1.073741824
+>>> print(size1.MiB)      # Binary
+1.00
 ```
 
 ## Advanced Usage
+
+### Block Alignment
+
+Calculate the apparent size with block alignment.
+
+```python
+>>> size = ByteSize(123_456_789)
+>>> aligned_size = size.apparent_size(4096)
+>>> print(aligned_size.bytes) 
+123457536
+```
 
 ### Arithmetic with Sizes
 
 Perform addition, subtraction, multiplication, and division.
 
 ```python
-size3 = ByteSize("1GB") + ByteSize("512MB")
-print(size3)  # '1.50 GiB'
-# Output: 1.50 GiB
+>>> size3 = ByteSize("1GB") + ByteSize("512MB")
+>>> print(size3)  # '1.50 GiB'
+1.50 GiB
 
-size4 = ByteSize("1TB") - ByteSize("500GB")
-print(size4)  # '0.50 TiB'
-# Output: 0.50 TiB
+>>> size4 = ByteSize("1TB") - ByteSize("500GB")
+>>> print(size4)  # '0.50 TiB'
+0.50 TiB
 ```
 
 ### Formatting Sizes
@@ -89,19 +102,9 @@ print(size4)  # '0.50 TiB'
 Customize formatting for specific units or precision.
 
 ```python
-size = ByteSize(123456789)
-print(f"{size:.2f:MB}")  # '123.46 MB'
-# Output: 123.46 MB
-print(f"{size:.2f:GiB}") # '0.11 GiB'
-# Output: 0.11 GiB
-```
-
-### Block Alignment
-
-Calculate the apparent size with block alignment.
-
-```python
-aligned_size = size.apparent_size(4096)
-print(aligned_size)  # Example: ByteSize(123456768)
-# Output: ByteSize(123456768)
+>>> size = ByteSize(123_456_789)
+>>> print(f"{size:.2f:MB}")  # '123.46 MB'
+123.46 MB
+>>> print(f"{size:.2f:GiB}") # '0.11 GiB'
+0.11 GiB
 ```
