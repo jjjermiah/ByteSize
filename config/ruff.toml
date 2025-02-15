@@ -112,7 +112,7 @@ max-complexity = 10
 quote-style = "single"
 
 # Use tabs for indentation
-indent-style = "tab"
+indent-style = "space"
 
 # Format code blocks within docstrings
 docstring-code-format = true

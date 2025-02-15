@@ -20,12 +20,16 @@ reproducible = false
 # A Wheel is a built distribution format
 # https://packaging.python.org/en/latest/specifications/binary-distribution-format/
 # https://hatch.pypa.io/latest/plugins/builder/wheel/ 
-
 packages = ["src/bytecase"]
+include = [
+  "src/bytecase",
+  "src/bytecase/py.typed"
+]
 
 [build.targets.sdist]
 # A Source Distribution (or "sdist") is a built distribution format
 # https://packaging.python.org/en/latest/specifications/source-distribution-format/
 # https://hatch.pypa.io/latest/plugins/builder/sdist/
+packages = ["src/bytecase"]
+include = ["src/bytecase", "src/bytecase/py.typed"]
 
-include = ["src/bytecase"]
