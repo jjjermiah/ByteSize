@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.8.0 (2025-02-15)
+
+### Features
+
+- Add environment and permissions for Test-Install job in GitHub Actions workflow
+  ([`24cd4c9`](https://github.com/jjjermiah/ByteSize/commit/24cd4c996b22189672521a01322999e539d597d8))
+
+
 ## v0.7.0 (2025-02-15)
 
 ### Features
