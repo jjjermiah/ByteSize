@@ -8,7 +8,7 @@ A zero-hassle approach to metric and binary byte calculations.
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json&style=flat-square)](https://github.com/astral-sh/ruff)
 [![Built with Material for MkDocs](https://img.shields.io/badge/mkdocs--material-gray?logo=materialformkdocs&style=flat-square)](https://github.com/squidfunk/mkdocs-material)
 
-![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version?file=httpss://raw.githubusercontent.com/jjjermiah/ByteCase/main/pyproject.toml)
+![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version?file=https://raw.githubusercontent.com/jjjermiah/ByteCase/main/pyproject.toml)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/jjjermiah/ByteCase?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/jjjermiah/ByteCase?style=flat-square)
