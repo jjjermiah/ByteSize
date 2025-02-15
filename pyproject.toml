@@ -4,7 +4,7 @@
 [project]
 name = "pybytesize"
 version = "0.2.1"
-description = "A zero-hassle approach to metric and binary byte calculations."
+description = "Smart, Pythonic, and dynamic: automatic unit selection and conversions made intuitive."
 license = "MIT"
 
 readme = "README.md"
@@ -26,7 +26,6 @@ classifiers = [
 
 requires-python = ">= 3.10"
 dependencies = [
-  "rich",
 ]
 
 [project.urls]
