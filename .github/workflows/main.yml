@@ -161,6 +161,11 @@ jobs:
   Test-Install:
     needs: Publish-PyPi
     runs-on: ${{ matrix.os }}
+    environment:
+      name: pypi
+      url: https://pypi.org/p/<your-pypi-project-name>
+    permissions:
+      id-token: write 
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, macos-13, windows-latest]
