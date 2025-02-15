@@ -60,3 +60,38 @@ include = [
 [tool.hatch.build.targets.sdist]
 packages = ["src/bytesize"]
 include = ["src/bytesize", "src/bytesize/py.typed"]
+
+
+[tool.semantic_release]
+version_variables = ["src/bytesize/__init__.py:__version__"]
+version_toml = ["pyproject.toml:project.version"]
+upload_to_release = true
+remove_dist = false
+commit_message = "chore(sem-ver): {version}"
+patch_without_tag = false
+major_on_zero = false
+
+[tool.semantic_release.branches.main]
+match = "(main|master)"
+
+[tool.semantic_release.branches.dev]
+match = "(dev|develop)"
+prerelease = true
+prerelease_token = "rc"
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = [
+  "build",
+  "chore",
+  "ci",
+  "docs",
+  "feat",
+  "fix",
+  "perf",
+  "style",
+  "refactor",
+  "test",
+]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
+default_bump_level = 0
