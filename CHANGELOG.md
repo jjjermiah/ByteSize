@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v0.4.0 (2025-02-15)
+
+### Features
+
+- Configure Semantic Release in pyproject.toml for automated versioning
+  ([`6a1bff7`](https://github.com/jjjermiah/ByteSize/commit/6a1bff73b0906b0a6daebaecb6c0d78c5a2be84a))
+
+- Extend pyproject.toml for Ruff configuration
+  ([`440399d`](https://github.com/jjjermiah/ByteSize/commit/440399dd01cb93a7d19663c46a637c9e359ced33))
+
+
 ## v0.3.0 (2025-02-15)
 
 ### Bug Fixes
@@ -46,11 +57,6 @@
 
 - Update version variable path to reflect package rename
   ([`1141de7`](https://github.com/jjjermiah/ByteSize/commit/1141de70112334e02cf1646202ee7d70b79d31f7))
-
-### Chores
-
-- **sem-ver**: 0.2.1
-  ([`feef81b`](https://github.com/jjjermiah/ByteSize/commit/feef81b86cbfbd8c06e29a03d536436a03ad8661))
 
 
 ## v0.2.0 (2025-02-15)
