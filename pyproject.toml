@@ -2,7 +2,7 @@
 ######################################### Package Config ###########################################
 #__________________________________________________________________________________________________#
 [project]
-name = "bytesize"
+name = "pybytesize"
 version = "0.2.1"
 description = "A zero-hassle approach to metric and binary byte calculations."
 license = "MIT"
@@ -41,3 +41,23 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project.scripts]
+
+
+[tool.hatch.version]
+path = "src/bytesize/__init__.py"
+
+[tool.hatch.build]
+directory = "dist"
+include-package-data = true
+reproducible = false
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bytesize"]
+include = [
+  "src/bytesize",
+  "src/bytesize/py.typed"
+]
+
+[tool.hatch.build.targets.sdist]
+packages = ["src/bytesize"]
+include = ["src/bytesize", "src/bytesize/py.typed"]

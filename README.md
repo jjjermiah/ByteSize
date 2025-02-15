@@ -33,7 +33,7 @@ A zero-hassle approach to metric and binary byte calculations.
 Clone the repository and install the package:
 
 ```bash
-pip install bytesize
+pip install pybytesize
 ```
 
 ## Quickstart Guide
