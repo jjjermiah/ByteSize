@@ -186,7 +186,7 @@ class ByteSize(int):
         >>> repr(ByteSize(1073741824))
         'ByteSize(1073741824) = 1.00 GiB'
         """
-        return f"{self.__class__.__name__}({int(self)}) = {self:.2f}"
+        return f"{self.__class__.__name__}({int(self)}) = {self}"
 
     def __str__(self) -> str:
         """
@@ -404,8 +404,6 @@ class ByteSize(int):
 
     def __truediv__(self, other: int | ByteSize) -> ByteSize:
         div_result = super().__truediv__(other)
-        # Convert to int or floor to preserve whole bytes, or let it stay float?
-        # The old version cast to int. We'll follow that:
         return ByteSize(int(div_result))
 
     def __floordiv__(self, other: int | ByteSize) -> ByteSize:
