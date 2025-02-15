@@ -11,6 +11,16 @@ from functools import lru_cache
 from types import MappingProxyType
 from typing import Final, Mapping
 
+__all__ = [
+    "ByteUnit",
+    "SYNONYMS",
+    "METRIC_UNITS",
+    "BINARY_UNITS",
+    "UnknownUnitError",
+    "find_closest_match",
+    "lookup_unit",
+]
+
 
 class UnknownUnitError(KeyError):
     """

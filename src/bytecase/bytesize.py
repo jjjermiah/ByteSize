@@ -12,6 +12,14 @@ from bytecase.byteunit import (
     lookup_unit,
 )
 
+__all__ = [
+    "ByteSize",
+    "ByteSizeError",
+    "NegativeByteSizeError",
+    "UnrecognizedSizeStringError",
+    "InvalidNumericValueError",
+]
+
 
 class ByteSizeError(Exception):
     """
@@ -36,7 +44,7 @@ class NegativeByteSizeError(ByteSizeError):
     """
 
     def __init__(self, value: object) -> None:
-        message = f'Byte size cannot be negative: {value}'
+        message = f"Byte size cannot be negative: {value}"
         super().__init__(message)
 
 
@@ -137,7 +145,7 @@ class ByteSize(int):
         UnknownUnitError: "No matching byte unit for 'XX'; did you mean: MB?"
         """
         # Simple regex to capture optional decimal numeric part and optional unit
-        match = re.match(r'^\s*(-?\d+(?:\.\d+)?)\s*([A-Za-z]+)?\s*$', value)
+        match = re.match(r"^\s*(-?\d+(?:\.\d+)?)\s*([A-Za-z]+)?\s*$", value)
         if not match:
             msg = f"Could not parse size string: '{value}'"
             msg += "\nExpected format: '10MB', '1536KiB', or '1024'."
@@ -162,7 +170,7 @@ class ByteSize(int):
             # Provide suggestions (if any)
             suggestions = find_closest_match(unit_str)
             msg = f"Unrecognized unit '{unit_str}';"
-            msg += f' did you mean: {suggestions}?' if suggestions else ''
+            msg += f" did you mean: {suggestions}?" if suggestions else ""
             raise UnknownUnitError(msg) from exc
 
         # Convert from float in the given unit to raw bytes
@@ -178,7 +186,7 @@ class ByteSize(int):
         >>> repr(ByteSize(1073741824))
         'ByteSize(1073741824) = 1.00 GiB'
         """
-        return f'{self.__class__.__name__}({int(self)}) = {self:.2f}'
+        return f"{self.__class__.__name__}({int(self)}) = {self:.2f}"
 
     def __str__(self) -> str:
         """
@@ -189,7 +197,7 @@ class ByteSize(int):
         >>> str(ByteSize(1073741824))
         '1.00 GiB'
         """
-        return self.__format__('.2f')
+        return self.__format__(".2f")
 
     # -------------------------------------------------------------------
     #  Best-fit logic
@@ -277,7 +285,7 @@ class ByteSize(int):
         ByteSize(1_236_992)
         """
         if block_size <= 0:
-            msg = 'Block size must be > 0.'
+            msg = "Block size must be > 0."
             raise ValueError(msg)
         blocks = (self.bytes + block_size - 1) // block_size
         return ByteSize(blocks * block_size)
@@ -317,7 +325,7 @@ class ByteSize(int):
         except UnknownUnitError as exc:
             # If no match, raise the standard Python attribute error
             msg = f"'{type(self).__name__}' object has no attribute '{name}'"
-            msg += f'\nClosest matches: {find_closest_match(name)}'
+            msg += f"\nClosest matches: {find_closest_match(name)}"
             raise AttributeError(msg) from exc
         return self.bytes / unit.factor
 
@@ -356,16 +364,16 @@ class ByteSize(int):
         '0.00 GiB'
         """
         # Check for 'precision:unit' style, e.g. '.2f:MB'
-        if ':' in format_spec:
-            float_fmt, suffix = format_spec.split(':', 1)
+        if ":" in format_spec:
+            float_fmt, suffix = format_spec.split(":", 1)
             try:
                 unit = lookup_unit(suffix)
             except UnknownUnitError as exc:
-                msg = f'Unknown unit: {suffix}'
-                msg += f'\nClosest matches: {find_closest_match(suffix)}'
+                msg = f"Unknown unit: {suffix}"
+                msg += f"\nClosest matches: {find_closest_match(suffix)}"
                 raise UnknownUnitError(msg) from exc
             scaled = self.bytes / unit.factor
-            return f'{scaled:{float_fmt}} {suffix}'
+            return f"{scaled:{float_fmt}} {suffix}"
 
         # If the entire format spec might be a known unit (like 'MB' or 'B'):
         try:
@@ -374,12 +382,12 @@ class ByteSize(int):
         except UnknownUnitError:
             # Not a recognized unit, so treat format_spec as a float format
             suffix, scaled = self.readable_binary
-            return f'{scaled:{format_spec}} {suffix}'
+            return f"{scaled:{format_spec}} {suffix}"
         else:
             # If exactly 'B', show as an integer
-            if format_spec == 'B':
-                return f'{scaled:.0f} B'
-            return f'{scaled:.2f} {format_spec}'
+            if format_spec == "B":
+                return f"{scaled:.0f} B"
+            return f"{scaled:.2f} {format_spec}"
 
     # -------------------------------------------------------------------
     #  Arithmetic returning ByteSize
