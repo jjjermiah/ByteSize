@@ -1,0 +1,44 @@
+#--------------------------------------------------------------------------------------------------#
+######################################### Package Config ###########################################
+#__________________________________________________________________________________________________#
+[project]
+name = "bytecase"
+version = "0.1.0"
+description = "A zero-hassle approach to metric and binary byte calculations."
+license = "MIT"
+
+readme = "README.md"
+keywords = ["bytecase", "pixi", "python"]
+
+authors = [{ name = "Jermiah Joseph", email = "jermiahjoseph98@gmail.com" }]
+maintainers = [{ name = "Jermiah Joseph", email = "jermiahjoseph98@gmail.com" }]
+
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Operating System :: OS Independent",
+  "License :: OSI Approved :: MIT License",
+]
+
+requires-python = ">= 3.10"
+dependencies = [
+  "rich",
+]
+
+[project.urls]
+homepage = "https://github.com/jjjermiah/bytecase"
+repository = "https://github.com/jjjermiah/bytecase"
+documentation = "https://jjjermiah.github.io/bytecase/"
+changelog = "https://github.com/jjjermiah/bytecase/blob/main/docs/CHANGELOG.md"
+issues = "https://github.com/jjjermiah/bytecase/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+myscript = "bytecase.main:main"
