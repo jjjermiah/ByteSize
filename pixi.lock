@@ -5084,7 +5084,7 @@ packages:
 - pypi: .
   name: pybytesize
   version: 0.2.1
-  sha256: 4aa2a126b8deae6289684bd08dd59b5fe84d59c10e0ed09ea38c97170795b14f
+  sha256: a5391262b3bd737dced2f5391d752845f6a48ee112976cc749249e3df66f621b
   requires_python: '>=3.10'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/noarch/pycparser-2.22-pyh29332c3_1.conda
