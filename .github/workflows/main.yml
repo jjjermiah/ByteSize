@@ -147,6 +147,7 @@ jobs:
         with:
           environments: publish
           pixi-version: v0.41.3
+          locked: false
 
       - name: Run build
         run: pixi run -e publish build
