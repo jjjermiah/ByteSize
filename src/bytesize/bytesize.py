@@ -3,7 +3,7 @@ from __future__ import annotations
 import re
 from typing import Type
 
-from PyByteSize.byteunit import (
+from bytesize.byteunit import (
     BINARY_UNITS,
     METRIC_UNITS,
     ByteUnit,

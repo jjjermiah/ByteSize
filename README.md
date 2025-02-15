@@ -6,17 +6,17 @@ A zero-hassle approach to metric and binary byte calculations.
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json&style=flat-square)](https://github.com/astral-sh/ruff)
 [![Built with Material for MkDocs](https://img.shields.io/badge/mkdocs--material-gray?logo=materialformkdocs&style=flat-square)](https://github.com/squidfunk/mkdocs-material)
 
-<!-- ![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version?file=https://raw.githubusercontent.com/jjjermiah/PyByteSize/main/pyproject.toml) -->
+<!-- ![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version?file=https://raw.githubusercontent.com/jjjermiah/ByteSize/main/pyproject.toml) -->
 
-![GitHub last commit](https://img.shields.io/github/last-commit/jjjermiah/PyByteSize?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/jjjermiah/PyByteSize?style=flat-square)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/jjjermiah/PyByteSize?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/jjjermiah/ByteSize?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/jjjermiah/ByteSize?style=flat-square)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/jjjermiah/ByteSize?style=flat-square)
 
-![GitHub contributors](https://img.shields.io/github/contributors/jjjermiah/PyByteSize?style=flat-square)
-![GitHub stars](https://img.shields.io/github/stars/jjjermiah/PyByteSize?style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/jjjermiah/PyByteSize?style=flat-square)
+![GitHub contributors](https://img.shields.io/github/contributors/jjjermiah/ByteSize?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/jjjermiah/ByteSize?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/jjjermiah/ByteSize?style=flat-square)
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/jjjermiah/PyByteSize?style=flat-square)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/jjjermiah/ByteSize?style=flat-square)
 
 `ByteSize` is a Python library that simplifies operations with file sizes, offering dynamic unit conversions, string parsing, formatting, and more.
 

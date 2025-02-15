@@ -1,6 +1,6 @@
 import pytest
 
-from PyByteSize.byteunit import (
+from bytesize.byteunit import (
     ByteUnit,
     UnknownUnitError,
     find_closest_match,

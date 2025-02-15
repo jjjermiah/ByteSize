@@ -2,7 +2,7 @@
 ############################################## PIXI ################################################
 #__________________________________________________________________________________________________#
 [project]
-name = "bytecase"
+name = "bytesize"
 channels = ["conda-forge"]
 platforms = ["osx-arm64", "linux-64", "win-64", "osx-64"]
 
@@ -19,7 +19,7 @@ py313 = { features = ["test", "py313"] }
 
 ############################################# DEFAULT #############################################
 [pypi-dependencies]
-bytecase = { path = ".", editable = true }
+bytesize = { path = ".", editable = true }
 
 [dependencies]
 python = ">=3.10"
