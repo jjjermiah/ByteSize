@@ -5083,8 +5083,8 @@ packages:
   timestamp: 1733569518868
 - pypi: .
   name: pybytesize
-  version: 0.2.1
-  sha256: a5391262b3bd737dced2f5391d752845f6a48ee112976cc749249e3df66f621b
+  version: 0.4.0
+  sha256: 7c186aeecb1642044f00776ef3d3b1e4763c849448492beb0a85cb4512dc3080
   requires_python: '>=3.10'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/noarch/pycparser-2.22-pyh29332c3_1.conda
