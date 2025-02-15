@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.2.1 (2025-02-15)
+
+### Bug Fixes
+
+- Update version variable path to reflect package rename
+  ([`1141de7`](https://github.com/jjjermiah/ByteCase/commit/1141de70112334e02cf1646202ee7d70b79d31f7))
+
+
 ## v0.2.0 (2025-02-15)
 
 
