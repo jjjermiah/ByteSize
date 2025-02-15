@@ -1,5 +1,5 @@
 [semantic_release]
-version_variables = ["src/bytecase/__init__.py:__version__"]
+version_variables = ["src/PyByteSize/__init__.py:__version__"]
 version_toml = ["pyproject.toml:project.version"]
 upload_to_release = true
 remove_dist = false

@@ -1,4 +1,4 @@
-# User Stories for **bytecase**
+# User Stories for **PyByteSize**
 
 1. **As a developer dealing with large file uploads**,  
    I want to quickly convert raw byte counts into a human-friendly format (e.g., `MB`, `GB`, `MiB`, `GiB`),  
@@ -22,7 +22,7 @@
 
 6. **As a performance analyst**,  
    I want to calculate throughput by dividing transferred bytes by time in seconds,  
-   so that I can obtain a new `bytecase` object to display with either metric or binary prefixes.
+   so that I can obtain a new `PyByteSize` object to display with either metric or binary prefixes.
 
 7. **As a Python library maintainer**,  
    I want a fully tested, type-annotated module for sizes,  

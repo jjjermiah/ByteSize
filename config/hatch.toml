@@ -1,7 +1,7 @@
 [version]
 # Path to file containing version string
 # https://hatch.pypa.io/latest/version/#sources
-path = "src/bytecase/__init__.py"
+path = "src/PyByteSize/__init__.py"
 
 [build]
 # Output directory for built distributions
@@ -20,16 +20,16 @@ reproducible = false
 # A Wheel is a built distribution format
 # https://packaging.python.org/en/latest/specifications/binary-distribution-format/
 # https://hatch.pypa.io/latest/plugins/builder/wheel/ 
-packages = ["src/bytecase"]
+packages = ["src/PyByteSize"]
 include = [
-  "src/bytecase",
-  "src/bytecase/py.typed"
+  "src/PyByteSize",
+  "src/PyByteSize/py.typed"
 ]
 
 [build.targets.sdist]
 # A Source Distribution (or "sdist") is a built distribution format
 # https://packaging.python.org/en/latest/specifications/source-distribution-format/
 # https://hatch.pypa.io/latest/plugins/builder/sdist/
-packages = ["src/bytecase"]
-include = ["src/bytecase", "src/bytecase/py.typed"]
+packages = ["src/PyByteSize"]
+include = ["src/PyByteSize", "src/PyByteSize/py.typed"]
 

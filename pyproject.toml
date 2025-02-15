@@ -2,13 +2,13 @@
 ######################################### Package Config ###########################################
 #__________________________________________________________________________________________________#
 [project]
-name = "bytecase"
+name = "PyByteSize"
 version = "0.1.0"
 description = "A zero-hassle approach to metric and binary byte calculations."
 license = "MIT"
 
 readme = "README.md"
-keywords = ["bytecase", "pixi", "python"]
+keywords = ["PyByteSize", "pixi", "python"]
 
 authors = [{ name = "Jermiah Joseph", email = "jermiahjoseph98@gmail.com" }]
 maintainers = [{ name = "Jermiah Joseph", email = "jermiahjoseph98@gmail.com" }]
@@ -30,15 +30,15 @@ dependencies = [
 ]
 
 [project.urls]
-homepage = "https://github.com/jjjermiah/bytecase"
-repository = "https://github.com/jjjermiah/bytecase"
-documentation = "https://jjjermiah.github.io/bytecase/"
-changelog = "https://github.com/jjjermiah/bytecase/blob/main/docs/CHANGELOG.md"
-issues = "https://github.com/jjjermiah/bytecase/issues"
+homepage = "https://github.com/jjjermiah/PyByteSize"
+repository = "https://github.com/jjjermiah/PyByteSize"
+documentation = "https://jjjermiah.github.io/PyByteSize/"
+changelog = "https://github.com/jjjermiah/PyByteSize/blob/main/docs/CHANGELOG.md"
+issues = "https://github.com/jjjermiah/PyByteSize/issues"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project.scripts]
-myscript = "bytecase.main:main"
+myscript = "PyByteSize.main:main"

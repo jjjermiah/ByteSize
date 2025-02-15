@@ -2,7 +2,7 @@ from typing import Any
 
 import pytest
 
-from bytecase.bytesize import (
+from PyByteSize.bytesize import (
     ByteSize,
     NegativeByteSizeError,
     UnknownUnitError,

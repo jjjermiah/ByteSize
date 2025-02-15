@@ -7,9 +7,9 @@ build_backend: hatch
 git_init: true
 github_username: jjjermiah
 package_description: A zero-hassle approach to metric and binary byte calculations.
-package_name: bytecase
+package_name: PyByteSize
 pixi_install: false
-project_name: ByteCase
-project_slug: bytecase
+project_name: PyByteSize
+project_slug: PyByteSize
 python_version: '3.10'
 software_license: MIT License
