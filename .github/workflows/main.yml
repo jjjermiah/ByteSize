@@ -155,3 +155,24 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1.12
         with:
           verbose: true
+
+  Test-Install:
+    needs: Publish-PyPi
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, macos-13, windows-latest]
+        python-version: ["3.12", "3.11", "3.10", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install using PyPi
+        run: |
+          pip install pybytesize==${{ needs.Semantic-Release.outputs.version }}
+          python -c "import pybytesize; print(pybytesize.__version__)"
