@@ -1,7 +1,5 @@
 # ByteCase
 
-=============================
-
 A zero-hassle approach to metric and binary byte calculations.
 
 [![pixi-badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/prefix-dev/pixi/main/assets/badge/v0.json&style=flat-square)](https://github.com/prefix-dev/pixi)
