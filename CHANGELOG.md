@@ -1,6 +1,25 @@
 # CHANGELOG
 
 
+## v0.6.0 (2025-02-15)
+
+### Chores
+
+- Update lockfile
+  ([`d603395`](https://github.com/jjjermiah/ByteSize/commit/d603395134ba244b17eefa3a01c785a592fb9762))
+
+### Features
+
+- Add locked parameter to GitHub Actions workflow for build job
+  ([`d4d4829`](https://github.com/jjjermiah/ByteSize/commit/d4d482999ff3d5dec615ac445eec608be1a99444))
+
+- Add test-install job to GitHub Actions workflow for multiple Python versions
+  ([`4d836de`](https://github.com/jjjermiah/ByteSize/commit/4d836dea48bac3a22c9a31de4b498f58e82e5b98))
+
+- Set locked parameter to false in GitHub Actions workflow
+  ([`3469e17`](https://github.com/jjjermiah/ByteSize/commit/3469e171c2a60567a5765b3e2487fb66837c9a31))
+
+
 ## v0.5.0 (2025-02-15)
 
 ### Chores
