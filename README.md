@@ -5,6 +5,7 @@ ByteSize takes the pain out of data-size conversions—efficiently handle metric
 [![pixi-badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/prefix-dev/pixi/main/assets/badge/v0.json&style=flat-square)](https://github.com/prefix-dev/pixi)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json&style=flat-square)](https://github.com/astral-sh/ruff)
 [![Built with Material for MkDocs](https://img.shields.io/badge/mkdocs--material-gray?logo=materialformkdocs&style=flat-square)](https://github.com/squidfunk/mkdocs-material)
+[![codecov](https://codecov.io/github/jjjermiah/ByteSize/graph/badge.svg?token=e4sdCGkwHL)](https://codecov.io/github/jjjermiah/ByteSize)
 
 <!-- ![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version?file=https://raw.githubusercontent.com/jjjermiah/ByteSize/main/pyproject.toml) -->
 
