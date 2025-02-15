@@ -41,6 +41,9 @@ build-backend = "hatchling.build"
 
 [project.scripts]
 
+[tool.ruff]
+# Extend the `pyproject.toml` file in the parent directory...
+extend = "config/ruff.toml"
 
 [tool.hatch.version]
 path = "src/bytesize/__init__.py"
