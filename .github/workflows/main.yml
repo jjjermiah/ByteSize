@@ -137,6 +137,11 @@ jobs:
     needs: Semantic-Release
     if: needs.Semantic-Release.outputs.released == 'true'
     runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/pybytesize
+    permissions:
+      id-token: write 
     steps:
       - name: Checkout the code with tag ${{ needs.Semantic-Release.outputs.tag }}
         uses: actions/checkout@v4
@@ -161,11 +166,6 @@ jobs:
   Test-Install:
     needs: Publish-PyPi
     runs-on: ${{ matrix.os }}
-    environment:
-      name: pypi
-      url: https://pypi.org/p/<your-pypi-project-name>
-    permissions:
-      id-token: write 
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, macos-13, windows-latest]
