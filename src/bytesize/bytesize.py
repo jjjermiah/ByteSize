@@ -329,34 +329,6 @@ class ByteSize(int):
             raise AttributeError(msg) from exc
         return self.bytes / unit.factor
 
-    def to_unit(self, unit: str) -> float:
-        """
-        Convert the ByteSize to the specified unit.
-
-        Parameters
-        ----------
-        unit : str
-            The unit to convert to (e.g., 'MB', 'GiB').
-
-        Returns
-        -------
-        float
-            The size in the specified unit.
-
-        Raises
-        ------
-        UnknownUnitError
-            If the unit is not recognized.
-        """
-        try:
-            byte_unit = lookup_unit(unit)
-        except UnknownUnitError as exc:
-            suggestions = find_closest_match(unit)
-            msg = f"Unrecognized unit '{unit}';"
-            msg += f" did you mean: {suggestions}?" if suggestions else ""
-            raise UnknownUnitError(msg) from exc
-        return self.bytes / byte_unit.get_factor()
-
     # -------------------------------------------------------------------
     #  Rich string formatting with __format__
     # -------------------------------------------------------------------
