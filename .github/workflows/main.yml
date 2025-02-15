@@ -1,0 +1,59 @@
+name: CI-CD
+
+# only run on pushes to main or pull requests
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["*"]
+  workflow_dispatch:
+    # Allows you to run this workflow manually from the Actions tab
+
+concurrency:
+  group: ${{ github.workflow }}_${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ###############################################################################################
+  # Unit-Tests: Run unit tests using pytest
+  ################################################################################################
+  Unit-Tests:
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15 # Consider increasing timeout
+    continue-on-error: true # dont fail the whole matrix if one fails
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, macos-13, windows-latest] 
+        env: ["py310", "py311", "py312", "py313"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Pixi
+        uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          environments: ${{ matrix.env }}
+          pixi-version: v0.40.0
+          cache: true
+
+      - name: Run pytest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pixi run -e ${{ matrix.env }} test_ci -s -vv
+
+      - name: Upload coverage report artifact to be used by Codecov
+        # only upload if matrix.os is ubuntu-latest and matrix.python-version is 3.12
+        if: matrix.os == 'ubuntu-latest' && matrix.env == 'py312'
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage-report
+
+      - name: JUnit Test Summary
+        id: pytest-summary
+        uses: test-summary/action@v2
+        with: 
+          paths: .cache/test-results/**/*.xml
+          show: "fail,skip"
+        if: always()
