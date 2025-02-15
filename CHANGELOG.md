@@ -1,6 +1,27 @@
 # CHANGELOG
 
 
+## v0.5.0 (2025-02-15)
+
+### Chores
+
+- Update lockfile
+  ([`47fa4d7`](https://github.com/jjjermiah/ByteSize/commit/47fa4d706df9bbb1788385d3971cc35af0355bd8))
+
+- Update lockfile
+  ([`0d1a93f`](https://github.com/jjjermiah/ByteSize/commit/0d1a93f2684850a44dc680c523e2df5353337bb7))
+
+### Documentation
+
+- Improve examples in readme
+  ([`5cb9635`](https://github.com/jjjermiah/ByteSize/commit/5cb96354bb66a3f30b496f29346f71a038ee731d))
+
+### Features
+
+- Add GitHub Actions workflow for publishing to PyPI
+  ([`f7adb22`](https://github.com/jjjermiah/ByteSize/commit/f7adb22ab81e7c8365e5e40fce3fa0bdcb64e641))
+
+
 ## v0.4.0 (2025-02-15)
 
 ### Features
