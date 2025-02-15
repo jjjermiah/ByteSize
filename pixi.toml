@@ -113,6 +113,7 @@ python-semantic-release = ">=8.5.1"
 
 [feature.release.tasks]
 semver = 'echo "Next Version is: $(semantic-release version --print)"'
+semver-publish = "semantic-release -c config/releaserc.toml"
 
 [feature.build.dependencies]
 hatch = "*"
