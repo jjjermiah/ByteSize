@@ -3,7 +3,7 @@
 #__________________________________________________________________________________________________#
 [project]
 name = "pybytesize"
-version = "0.8.0"
+version = "0.8.1"
 description = "Smart, Pythonic, and dynamic: automatic unit selection and conversions made intuitive."
 license = "MIT"
 

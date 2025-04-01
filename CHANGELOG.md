@@ -1,6 +1,30 @@
 # CHANGELOG
 
 
+## v0.8.1 (2025-04-01)
+
+### Bug Fixes
+
+- Update string representation of ByteSize to include full precision
+  ([`65dfcbf`](https://github.com/jjjermiah/ByteSize/commit/65dfcbf70d829b2556054cce5d8ac0a359050083))
+
+### Chores
+
+- Format
+  ([`4cf2029`](https://github.com/jjjermiah/ByteSize/commit/4cf20299fb67c84b6cb5ea08db72b0c5fb6c5b39))
+
+- Update lockfile
+  ([`e596c2f`](https://github.com/jjjermiah/ByteSize/commit/e596c2fb0c0de89ea5a42df32ebdfd80ec13394f))
+
+- Update lockfile
+  ([`ccd0dba`](https://github.com/jjjermiah/ByteSize/commit/ccd0dbac094427f13da43a21c97a0c6672e7c578))
+
+### Documentation
+
+- Notebook example
+  ([`cc56ba2`](https://github.com/jjjermiah/ByteSize/commit/cc56ba259dd1f99537da21e5c6882ba192b8325e))
+
+
 ## v0.8.0 (2025-02-15)
 
 ### Features
