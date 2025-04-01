@@ -19,20 +19,20 @@ from .byteunit import (
 
 __all__ = [
     # byteunit
-    "ByteUnit",
-    "SYNONYMS",
-    "METRIC_UNITS",
-    "BINARY_UNITS",
-    "UnknownUnitError",
-    "find_closest_match",
-    "lookup_unit",
+    'ByteUnit',
+    'SYNONYMS',
+    'METRIC_UNITS',
+    'BINARY_UNITS',
+    'UnknownUnitError',
+    'find_closest_match',
+    'lookup_unit',
     # bytesize
-    "ByteSize",
-    "ByteSizeError",
-    "NegativeByteSizeError",
-    "UnrecognizedSizeStringError",
-    "InvalidNumericValueError",
+    'ByteSize',
+    'ByteSizeError',
+    'NegativeByteSizeError',
+    'UnrecognizedSizeStringError',
+    'InvalidNumericValueError',
 ]
-version = "0.1.0"
+version = '0.1.0'
 
 __version__ = version

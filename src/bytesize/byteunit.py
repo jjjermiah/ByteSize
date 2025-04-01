@@ -12,13 +12,13 @@ from types import MappingProxyType
 from typing import Final, Mapping
 
 __all__ = [
-    "ByteUnit",
-    "SYNONYMS",
-    "METRIC_UNITS",
-    "BINARY_UNITS",
-    "UnknownUnitError",
-    "find_closest_match",
-    "lookup_unit",
+    'ByteUnit',
+    'SYNONYMS',
+    'METRIC_UNITS',
+    'BINARY_UNITS',
+    'UnknownUnitError',
+    'find_closest_match',
+    'lookup_unit',
 ]
 
 
@@ -79,14 +79,14 @@ def find_closest_match(string: str) -> str:
     from difflib import get_close_matches
 
     def pluralized(s: str) -> str:
-        return s + "s"
+        return s + 's'
 
     if string in SYNONYMS:
         return string
     elif pluralized(string) in SYNONYMS:
         return pluralized(string)
 
-    return ", ".join(get_close_matches(string, SYNONYMS.keys(), n=1, cutoff=0.3))
+    return ', '.join(get_close_matches(string, SYNONYMS.keys(), n=1, cutoff=0.3))
 
 
 @lru_cache(maxsize=64)
@@ -164,42 +164,42 @@ class ByteUnit(Enum):
 SYNONYMS: Mapping[str, ByteUnit] = MappingProxyType(
     {
         # Base unit
-        "B": ByteUnit.B,
-        "bytes": ByteUnit.B,
+        'B': ByteUnit.B,
+        'bytes': ByteUnit.B,
         # Metric units
-        "KB": ByteUnit.KB,
-        "kilobytes": ByteUnit.KB,
-        "MB": ByteUnit.MB,
-        "megabytes": ByteUnit.MB,
-        "GB": ByteUnit.GB,
-        "gigabytes": ByteUnit.GB,
-        "TB": ByteUnit.TB,
-        "terabytes": ByteUnit.TB,
-        "PB": ByteUnit.PB,
-        "petabytes": ByteUnit.PB,
-        "EB": ByteUnit.EB,
-        "exabytes": ByteUnit.EB,
-        "ZB": ByteUnit.ZB,
-        "zettabytes": ByteUnit.ZB,
-        "YB": ByteUnit.YB,
-        "yottabytes": ByteUnit.YB,
+        'KB': ByteUnit.KB,
+        'kilobytes': ByteUnit.KB,
+        'MB': ByteUnit.MB,
+        'megabytes': ByteUnit.MB,
+        'GB': ByteUnit.GB,
+        'gigabytes': ByteUnit.GB,
+        'TB': ByteUnit.TB,
+        'terabytes': ByteUnit.TB,
+        'PB': ByteUnit.PB,
+        'petabytes': ByteUnit.PB,
+        'EB': ByteUnit.EB,
+        'exabytes': ByteUnit.EB,
+        'ZB': ByteUnit.ZB,
+        'zettabytes': ByteUnit.ZB,
+        'YB': ByteUnit.YB,
+        'yottabytes': ByteUnit.YB,
         # Binary units
-        "KiB": ByteUnit.KiB,
-        "kibibytes": ByteUnit.KiB,
-        "MiB": ByteUnit.MiB,
-        "mebibytes": ByteUnit.MiB,
-        "GiB": ByteUnit.GiB,
-        "gibibytes": ByteUnit.GiB,
-        "TiB": ByteUnit.TiB,
-        "tebibytes": ByteUnit.TiB,
-        "PiB": ByteUnit.PiB,
-        "pebibytes": ByteUnit.PiB,
-        "EiB": ByteUnit.EiB,
-        "exbibytes": ByteUnit.EiB,
-        "ZiB": ByteUnit.ZiB,
-        "zebibytes": ByteUnit.ZiB,
-        "YiB": ByteUnit.YiB,
-        "yobibytes": ByteUnit.YiB,
+        'KiB': ByteUnit.KiB,
+        'kibibytes': ByteUnit.KiB,
+        'MiB': ByteUnit.MiB,
+        'mebibytes': ByteUnit.MiB,
+        'GiB': ByteUnit.GiB,
+        'gibibytes': ByteUnit.GiB,
+        'TiB': ByteUnit.TiB,
+        'tebibytes': ByteUnit.TiB,
+        'PiB': ByteUnit.PiB,
+        'pebibytes': ByteUnit.PiB,
+        'EiB': ByteUnit.EiB,
+        'exbibytes': ByteUnit.EiB,
+        'ZiB': ByteUnit.ZiB,
+        'zebibytes': ByteUnit.ZiB,
+        'YiB': ByteUnit.YiB,
+        'yobibytes': ByteUnit.YiB,
     }
 )
 
